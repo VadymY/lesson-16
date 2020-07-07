@@ -14,15 +14,24 @@
 // Решение
 
 class Stringer {
+    check(str){
+        if (typeof str !== 'string'){
+            throw new Error("It is not a string");
+        }
+    }
+
     reverse(str){
+        this.check(str);
         return str.split("").reverse().join("");
     }
 
     uppercaseFirst(str){
+        this.check(str);
         return  str.split("")[0].toUpperCase() + str.substring(1, str.length);
     }
 
     uppercaseAll(str){
+        this.check(str);
         let ret_arr = [];
         let arr = str.split(" ");
         for (let i = 0; i < arr.length; i++){

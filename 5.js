@@ -41,7 +41,7 @@ class Student extends User{
 
     getCourse(){
         let now = new Date();
-        let enter = new Date(this.year, 0, 1);
+        let enter = new Date(this.year, 9, 0);
         let now_date = new Date(now.getFullYear(),now.getMonth(), now.getDate());
         let diff = new Date(now_date - enter);
         return diff.getFullYear() - 1970;
